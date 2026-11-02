@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./imagens/logo.jfif" />
+  <title>Painel de Edição Visual (Sem Programação) — Cooperativa Recicla VR & UFF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            coop: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
+              400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
+              800: '#1e40af', 900: '#1e3a8a', 950: '#172554'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans min-h-screen flex flex-col">
+
+  <!-- Notificação Toast Flutuante -->
+  <div id="admin-toast" class="fixed bottom-5 right-5 z-50 hidden max-w-md bg-coop-900 text-white px-5 py-4 rounded-2xl shadow-2xl border border-coop-500 flex items-center gap-3">
+    <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-300 shrink-0"></i>
+    <span id="admin-toast-msg" class="text-sm font-semibold">Alterações salvas com sucesso!</span>
+  </div>
+
+  <!-- Tela de Login Restrito (#login-screen) -->
+  <section id="login-screen" class="flex-1 flex items-center justify-center px-4 py-12 bg-gradient-to-br from-coop-950 via-coop-900 to-slate-900">
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-coop-200 p-7 sm:p-9 space-y-6">
+      <div class="text-center space-y-2">
+        <img
+          src="./imagens/logo.jfif"
+          alt="Logotipo Cooperativa Recicla VR"
+          onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=1;this.src='./imagens/logo.jpg';}else{this.onerror=null;this.src='./assets/logo-recicla-vr.svg';}"
+          class="w-16 h-16 rounded-2xl object-cover mx-auto shadow-md"
+        />
+        <h1 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
+          Acesso Restrito — Equipe UFF &amp; Administração
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Informe suas credenciais institucionais para acessar o Painel de Edição Visual do site.
+        </p>
+      </div>
+
+      <form id="login-form" class="space-y-4" autocomplete="off">
+        <div class="space-y-1.5">
+          <label for="login-username" class="block text-xs sm:text-sm font-bold text-slate-800">Usuário</label>
+          <input
+            id="login-username"
+            type="text"
+            required
+            placeholder="Ex: reciclavr.uff"
+            class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-300 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-coop-600"
+          />
+        </div>
+
+        <div class="space-y-1.5">
+          <label for="login-password" class="block text-xs sm:text-sm font-bold text-slate-800">Senha</label>
+          <div class="relative">
+            <input
+              id="login-password"
+              type="password"
+              required
+              placeholder="Digite a senha de acesso"
+              class="w-full pl-4 pr-11 py-3 text-sm bg-slate-50 border border-slate-300 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-coop-600"
+            />
+            <button
+              id="toggle-password-btn"
+              type="button"
+              aria-label="Mostrar ou ocultar senha"
+              class="absolute right-3 top-2.5 p-1 text-slate-500 hover:text-coop-800"
+            >
+              <i data-lucide="eye" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="login-error" class="hidden bg-rose-50 border border-rose-300 text-rose-800 text-xs sm:text-sm font-semibold rounded-xl p-3">
+          Usuário ou senha inválidos. Verifique os dados informados e tente novamente.
+        </div>
+
+        <button
+          type="submit"
+          class="w-full inline-flex items-center justify-center gap-2 bg-coop-700 hover:bg-coop-800 text-white font-extrabold text-sm px-5 py-3.5 rounded-xl shadow-md transition"
+        >
+          <i data-lucide="log-in" class="w-4 h-4"></i>
+          <span>Entrar no Painel</span>
+        </button>
+      </form>
+
+      <div class="pt-3 border-t border-slate-200 text-center">
+        <a href="index.html" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-coop-800 hover:text-coop-600">
+          <span>← Voltar para o site público</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Painel Administrativo Protegido (#admin-dashboard) -->
+  <div id="admin-dashboard" class="hidden flex-1 flex flex-col">
+  <!-- Barra de Ação Superior Fixa -->
+  <header class="sticky top-0 z-40 bg-coop-950 text-white border-b border-coop-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3">
+      <div class="flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <img
+            src="./imagens/logo.jfif"
+            alt="Logotipo Cooperativa Recicla VR"
+            onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=1;this.src='./imagens/logo.jpg';}else{this.onerror=null;this.src='./assets/logo-recicla-vr.svg';}"
+            class="w-10 h-10 rounded-xl object-cover bg-white shadow-sm shrink-0"
+          />
+          <div>
+            <h1 class="font-display font-extrabold text-base sm:text-lg leading-tight">
+              Painel de Edição Visual (Sem Programação) — Recicla VR &amp; UFF
+            </h1>
+            <p class="text-xs text-coop-200">
+              Altere textos, contatos, perguntas e módulos do curso facilmente em português
+            </p>
+          </div>
+        </div>
+        <span id="status-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-coop-800 text-coop-100 border border-coop-600 shrink-0">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Conteúdo Oficial Carregado</span>
+        </span>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button id="btn-save-preview" type="button" class="inline-flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow transition">
+          <i data-lucide="save" class="w-4 h-4"></i>
+          <span>Salvar e Testar no Navegador</span>
+        </button>
+
+        <button id="btn-export-js" type="button" class="inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow transition">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Baixar Atualização Oficial (siteContent.js + .json)</span>
+        </button>
+
+        <label for="file-import-json" id="btn-import-json" class="cursor-pointer inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs px-3.5 py-2.5 rounded-xl border border-white/15 transition">
+          <i data-lucide="upload" class="w-4 h-4 text-amber-300"></i>
+          <span>Importar JSON</span>
+        </label>
+        <input id="file-import-json" type="file" accept=".json" class="hidden" />
+
+        <button id="btn-reset" type="button" class="inline-flex items-center gap-1.5 bg-rose-900/70 hover:bg-rose-800 text-rose-100 font-semibold text-xs px-3.5 py-2.5 rounded-xl border border-rose-700/60 transition">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+          <span>Restaurar Original</span>
+        </button>
+
+        <a href="index.html" class="inline-flex items-center gap-1.5 bg-coop-700 hover:bg-coop-600 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl border border-coop-500 transition">
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          <span>Ver Site ao Vivo</span>
+        </a>
+
+        <button id="btn-logout" type="button" class="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold text-xs px-3.5 py-2.5 rounded-xl border border-slate-600 transition">
+          <span>🚪 Sair (Bloquear Painel)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout Principal em 2 Colunas -->
+  <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+    <!-- Coluna Esquerda: Menu de Seções + Busca + Guia UFF -->
+    <aside class="lg:col-span-4 xl:col-span-3 space-y-4 lg:sticky lg:top-24">
+      <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm space-y-3">
+        <label for="section-search" class="block text-xs font-extrabold uppercase tracking-wider text-slate-500">
+          1. Escolha a Seção do Site
+        </label>
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
+          <input
+            id="section-search"
+            type="search"
+            placeholder="Buscar seção ou texto..."
+            class="w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-coop-600"
+          />
+        </div>
+        <nav id="section-nav-list" aria-label="Seções editáveis do site" class="space-y-1 max-h-[52vh] overflow-y-auto pr-1">
+          <!-- Preenchido dinamicamente por js/admin.js -->
+        </nav>
+      </div>
+
+      <!-- Cartão de Instruções Rápidas para a UFF e Cooperados -->
+      <div class="bg-coop-900 text-white rounded-2xl p-4 shadow-sm space-y-2.5 text-xs leading-relaxed">
+        <div class="flex items-center gap-2 font-display font-bold text-sm text-amber-300">
+          <i data-lucide="help-circle" class="w-4 h-4 shrink-0"></i>
+          <span>Instruções para a UFF e Cooperativa</span>
+        </div>
+        <p><strong>Passo 1:</strong> Escolha uma seção na lista acima e edite os textos nos campos ao lado.</p>
+        <p><strong>Passo 2:</strong> Clique em <em>"Salvar e Testar no Navegador"</em> e depois em <em>"Ver Site ao Vivo"</em> para conferir como ficou.</p>
+        <p><strong>Passo 3 (Publicar Oficial):</strong> Clique em <em>"Baixar Atualização Oficial"</em> e substitua os arquivos na pasta <code>data/</code> do projeto.</p>
+      </div>
+    </aside>
+
+    <!-- Coluna Direita: Formulário Visual Dinâmico da Seção Selecionada -->
+    <main class="lg:col-span-8 xl:col-span-9 bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-sm space-y-6">
+      <div class="border-b border-slate-200 pb-4 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-coop-700">2. Edite os Campos Abaixo</span>
+          <h2 id="current-section-title" class="font-display font-extrabold text-xl sm:text-2xl text-slate-900 mt-0.5">
+            Carregando seção...
+          </h2>
+        </div>
+        <span id="current-section-key" class="text-xs font-mono bg-slate-100 text-slate-600 px-3 py-1 rounded-lg border border-slate-200"></span>
+      </div>
+
+      <div id="editor-form-container" class="space-y-5">
+        <!-- Renderizado recursivamente por js/admin.js -->
+      </div>
+    </main>
+  </div>
+  </div>
+
+  <script src="./data/siteContent.js"></script>
+  <script src="./js/admin.js"></script>
+</body>
+</html>

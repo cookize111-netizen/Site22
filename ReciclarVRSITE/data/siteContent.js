@@ -1,0 +1,1254 @@
+/**
+ * Cooperativa Recicla VR — Conteúdo Padrão do Site (Fallback Local & Offline)
+ * Projeto de Tecnologia Social em parceria com a UFF (Universidade Federal Fluminense)
+ *
+ * Este arquivo espelha exatamente o conteúdo de `data/siteContent.json` em `window.DEFAULT_SITE_CONTENT`
+ * para garantir que o site funcione perfeitamente tanto aberto direto pelo computador (`file://`)
+ * quanto hospedado gratuitamente na internet (Netlify/GitHub Pages).
+ */
+window.DEFAULT_SITE_CONTENT = {
+  "meta": {
+    "siteTitle": "Cooperativa Recicla VR | Reciclagem, Autogestão e Economia Solidária em Volta Redonda - RJ",
+    "shortName": "Cooperativa Recicla VR",
+    "officialName": "Cooperativa Popular dos Agentes do Meio Ambiente do Município de Volta Redonda",
+    "tagline": "Transformando resíduos em trabalho digno, renda justa e futuro sustentável para Volta Redonda desde 2002.",
+    "city": "Volta Redonda",
+    "state": "RJ",
+    "projectPartner": "UFF - Universidade Federal Fluminense (Projeto de Tecnologia Social)",
+    "lastUpdated": "2026",
+    "navigationLinks": [
+      { "id": "inicio", "label": "Início" },
+      { "id": "quem-somos", "label": "Quem Somos" },
+      { "id": "historia", "label": "Nossa História" },
+      { "id": "funcionamento", "label": "Como Funciona" },
+      { "id": "autogestao", "label": "Autogestão" },
+      { "id": "curso-autogestao", "label": "Curso de Autogestão" },
+      { "id": "como-reciclar", "label": "Como Reciclar" },
+      { "id": "entrega-materiais", "label": "Entrega de Materiais" },
+      { "id": "impacto", "label": "Impacto" },
+      { "id": "parcerias", "label": "Parcerias" },
+      { "id": "faq", "label": "Perguntas Frequentes" },
+      { "id": "contato", "label": "Contato e Localização" }
+    ],
+    "editorConfig": {
+      "panelTitle": "Painel de Edição Visual — Cooperativa Recicla VR",
+      "panelSubtitle": "Altere textos, perguntas frequentes, parcerias e contatos de forma simples, sem precisar de programação.",
+      "sectionLabels": {
+        "meta": "Identidade e Menu do Site",
+        "hero": "Apresentação Principal (Topo)",
+        "quemSomos": "Quem Somos, Missão, Visão e Valores",
+        "historia": "Nossa História e Linha do Tempo",
+        "funcionamento": "Funcionamento da Cooperativa",
+        "autogestao": "Autogestão e Economia Solidária",
+        "cursoAutogestao": "Curso Prático de Autogestão (UFF)",
+        "comoReciclar": "Educação Ambiental: Como Reciclar",
+        "separacaoResiduos": "Guia de Separação de Resíduos",
+        "entregaMateriais": "Como Entregar Materiais",
+        "impactoSocialAmbiental": "Impacto Social e Ambiental",
+        "parcerias": "Área de Parcerias (Moradores, Empresas, Escolas e UFF)",
+        "faq": "Perguntas Frequentes (FAQ)",
+        "contatoLocalizacao": "Localização, Horários e Contatos"
+      },
+      "uiLabels": {
+        "saveLocalButton": "Salvar Alterações no Navegador",
+        "downloadJsonButton": "Baixar Arquivo Atualizado (siteContent.json)",
+        "importJsonButton": "Importar Arquivo JSON",
+        "resetDefaultButton": "Restaurar Conteúdo Original",
+        "backToSiteButton": "Voltar para o Site",
+        "addItemButton": "Adicionar Novo Item",
+        "removeItemButton": "Remover Item"
+      }
+    }
+  },
+  "hero": {
+    "badge": "Tecnologia Social • Economia Solidária • Volta Redonda - RJ",
+    "cooperativeName": "Cooperativa Recicla VR",
+    "officialSubtitle": "Cooperativa Popular dos Agentes do Meio Ambiente do Município de Volta Redonda",
+    "tagline": "Transformando resíduos em trabalho digno, renda justa e futuro sustentável para Volta Redonda desde 2002.",
+    "title": "Reciclar é cuidar de Volta Redonda e valorizar quem trabalha pelo nosso meio ambiente.",
+    "introduction": "Somos uma cooperativa de catadores e catadoras de materiais recicláveis regida pela autogestão e pela economia solidária. Quando você separa seus resíduos em casa, no condomínio, na escola ou na empresa e destina para a Recicla VR, você preserva a natureza, fortalece a coleta seletiva do nosso município e gera trabalho e renda digna para dezenas de famílias.",
+    "ctas": {
+      "primary": {
+        "label": "Como Entregar Materiais",
+        "href": "#entrega-materiais"
+      },
+      "secondary": {
+        "label": "Seja Parceiro",
+        "href": "#parcerias"
+      },
+      "tertiary": {
+        "label": "Conheça Nossa História",
+        "href": "#historia"
+      }
+    },
+    "highlights": [
+      {
+        "id": "trajetoria",
+        "title": "Desde 2002 em Volta Redonda",
+        "description": "Mais de duas décadas de atuação histórica na coleta seletiva e educação ambiental.",
+        "icon": "Recycle"
+      },
+      {
+        "id": "autogestao",
+        "title": "100% Autogestão e Economia Solidária",
+        "description": "Trabalho coletivo sem patrão, com decisões em assembleia e renda justa para os cooperados.",
+        "icon": "Users"
+      },
+      {
+        "id": "coleta-seletiva",
+        "title": "Agentes do Meio Ambiente",
+        "description": "Parceira ativa da Coleta Seletiva Municipal, do CACS-VR e da comunidade.",
+        "icon": "HeartHandshake"
+      },
+      {
+        "id": "localizacao",
+        "title": "Galpão no Bairro Sessenta",
+        "description": "Rua 35, nº 650 — de portas abertas para receber seus materiais recicláveis.",
+        "icon": "MapPin"
+      }
+    ]
+  },
+  "quemSomos": {
+    "sectionTitle": "Quem Somos",
+    "subtitle": "Agentes do Meio Ambiente trabalhando pela sustentabilidade e pela justiça social na Cidade do Aço.",
+    "introParagraphs": [
+      "A Cooperativa Recicla VR (Cooperativa Popular dos Agentes do Meio Ambiente do Município de Volta Redonda) é uma organização coletiva formada por trabalhadores e trabalhadoras da reciclagem que atuam na linha de frente da preservação ambiental em Volta Redonda – RJ.",
+      "Mais do que separar materiais, nós somos verdadeiros Agentes Ambientais: evitamos que toneladas de resíduos recicláveis sejam enterradas diariamente, reduzimos a poluição urbana e reintegramos matérias-primas ao ciclo produtivo com responsabilidade social e dignidade humana.",
+      "Nossa cooperativa é fruto da união de homens e mulheres que transformaram a catação de recicláveis em uma atividade organizada, cidadã e reconhecida pela Política Nacional de Resíduos Sólidos (Lei nº 12.305/2010)."
+    ],
+    "mission": {
+      "title": "Nossa Missão",
+      "description": "Promover a gestão sustentável de resíduos recicláveis em Volta Redonda por meio do trabalho associado e autogestionário, gerando trabalho decente, renda justa e inclusão social para catadores e catadoras, além de educação ambiental para toda a comunidade."
+    },
+    "vision": {
+      "title": "Nossa Visão",
+      "description": "Ser referência regional no Médio Paraíba em cooperativismo popular de reciclagem, tecnologia social e educação ambiental, reconhecida pela excelência na triagem de materiais e pela transformação social na vida dos trabalhadores."
+    },
+    "values": [
+      {
+        "id": "autogestao-democracia",
+        "title": "Autogestão e Democracia",
+        "description": "Decisões tomadas coletivamente em assembleia, onde cada cooperado e cooperada tem voz e voto igualitário.",
+        "icon": "Vote"
+      },
+      {
+        "id": "solidariedade-cooperacao",
+        "title": "Solidariedade e Cooperação",
+        "description": "O bem-estar coletivo, o apoio mútuo e a união no trabalho estão sempre acima da competição individual.",
+        "icon": "HeartHandshake"
+      },
+      {
+        "id": "dignidade-valorizacao",
+        "title": "Justiça Social e Valorização Humana",
+        "description": "Orgulho da profissão de catador e catadora como verdadeiros agentes ambientais essenciais para a cidade.",
+        "icon": "Award"
+      },
+      {
+        "id": "preservacao-ambiental",
+        "title": "Preservação Ambiental",
+        "description": "Compromisso diário com a defesa da natureza, o reaproveitamento de recursos e o futuro das próximas gerações.",
+        "icon": "Leaf"
+      },
+      {
+        "id": "transparencia-etica",
+        "title": "Transparência e Ética",
+        "description": "Relação honesta, aberta e responsável entre os cooperados, parceiros, universidades, poder público e sociedade.",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
+  "historia": {
+    "sectionTitle": "Nossa História",
+    "subtitle": "Mais de duas décadas de luta, resistência e conquista de direitos dos catadores e catadoras em Volta Redonda.",
+    "narrativeParagraphs": [
+      "A trajetória da Cooperativa Recicla VR começou em 2002, em Volta Redonda, nascida da coragem e da mobilização de catadores e catadoras que buscavam superar o trabalho isolado, a invisibilidade social e a exploração de atravessadores.",
+      "Inicialmente organizada como associação, nossa coletividade foi amadurecendo por meio da formação em Economia Solidária e da luta por políticas públicas municipais, evoluindo para uma cooperativa formalizada: a Cooperativa Popular dos Agentes do Meio Ambiente do Município de Volta Redonda.",
+      "Ao longo dos anos, participamos ativamente da construção da Coleta Seletiva Municipal e do CACS-VR (Conselho/Articulação das Cooperativas e Associações de Catadores de Volta Redonda), enfrentando e superando grandes desafios — como a crise sanitária e econômica da pandemia de COVID-19 — e renovando nossa presença digital desde o nosso blog histórico de 2015 até este novo portal desenvolvido em parceria com a UFF."
+    ],
+    "timeline": [
+      {
+        "year": "2002",
+        "title": "O Início da Caminhada em Volta Redonda",
+        "description": "Grupos de catadores e catadoras de Volta Redonda unem forças para sair da informalidade e conquistar condições dignas de trabalho coletivo, dando origem à organização que se tornaria a Recicla VR."
+      },
+      {
+        "year": "Consolidação",
+        "title": "De Associação a Cooperativa Popular",
+        "description": "Com o fortalecimento da autogestão e da consciência cooperativista, o grupo formaliza-se como Cooperativa Popular dos Agentes do Meio Ambiente do Município de Volta Redonda, conquistando autonomia produtiva."
+      },
+      {
+        "year": "Articulação e CACS-VR",
+        "title": "Coleta Seletiva Municipal e Luta por Reconhecimento",
+        "description": "Integração às ações de Coleta Seletiva Municipal e atuação ativa junto ao CACS-VR na defesa dos direitos dos catadores e na aplicação da Política Nacional de Resíduos Sólidos no município."
+      },
+      {
+        "year": "2015",
+        "title": "Registro da Memória no Blog Histórico",
+        "description": "Criação do blog institucional da Recicla VR (reciclavr.blogspot.com), registrando assembleias, parcerias, mobilizações e o cotidiano de trabalho no galpão."
+      },
+      {
+        "year": "2020–2022",
+        "title": "Resistência e União na Pandemia",
+        "description": "Superação dos impactos severos da pandemia de COVID-19 por meio da solidariedade entre os cooperados, cuidados coletivos de saúde e apoio de parceiros locais."
+      },
+      {
+        "year": "Atualidade",
+        "title": "Tecnologia Social em Parceria com a UFF",
+        "description": "Modernização da comunicação digital e fortalecimento da educação ambiental em Volta Redonda com este novo portal autogerido, desenvolvido junto à Universidade Federal Fluminense (UFF)."
+      }
+    ],
+    "blogArchiveCallout": {
+      "title": "Memória Viva: Conheça Nosso Blog Histórico de 2015",
+      "description": "Em 2015, criamos nosso primeiro espaço na internet para compartilhar fotos, conquistas e notícias da cooperativa. Mantemos esse acervo vivo como parte da história dos catadores de Volta Redonda.",
+      "url": "https://reciclavr.blogspot.com/?m=1",
+      "buttonLabel": "Acessar o Blog Histórico (2015)"
+    }
+  },
+  "funcionamento": {
+    "sectionTitle": "Funcionamento da Cooperativa",
+    "subtitle": "Conheça o passo a passo do nosso trabalho diário no galpão, da chegada do reciclável até o retorno à indústria.",
+    "intro": "Para que a reciclagem aconteça de verdade, existe um trabalho técnico, coletivo e cuidadoso realizado diariamente pelos cooperados e cooperadas da Recicla VR. Veja como funciona o ciclo dos materiais em nosso galpão:",
+    "steps": [
+      {
+        "stepNumber": 1,
+        "id": "coleta-recebimento",
+        "title": "Coleta e Recebimento",
+        "description": "Os materiais recicláveis secos chegam ao nosso galpão no Bairro Sessenta por meio da coleta seletiva, da entrega direta feita por moradores e das coletas combinadas com condomínios, escolas, comércios e empresas parceiras.",
+        "icon": "Truck",
+        "details": [
+          "Recebimento direto no galpão (Rua 35, nº 650, Bairro Sessenta)",
+          "Integração com rotas da Coleta Seletiva e parceiros cadastrados",
+          "Descarga segura e organização inicial dos volumes recebidos"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "id": "triagem-material",
+        "title": "Triagem Detalhada por Tipo de Material",
+        "description": "Na bancada de triagem, os cooperados separam manualmente cada item por categoria, cor e composição (como PET transparente, PET verde, PEAD, PP, papel branco, papelão, papel misto, alumínio, ferro e vidro).",
+        "icon": "Layers",
+        "details": [
+          "Classificação técnica em dezenas de subtipos de recicláveis",
+          "Retirada de contaminantes e rejeitos enviados por engano",
+          "Garantia de pureza e qualidade exigida pela indústria recicladora"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "id": "prensagem-enfardamento",
+        "title": "Prensagem e Enfardamento",
+        "description": "Depois de separados por tipo, os plásticos, papéis, papelões e metais vão para as prensas hidráulicas, onde são compactados em fardos padronizados, pesados e armazenados com segurança.",
+        "icon": "PackageCheck",
+        "details": [
+          "Compactação em prensas para otimizar espaço e logística",
+          "Pesagem e controle transparente da produção coletiva",
+          "Armazenamento organizado por lote e categoria de material"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "id": "comercializacao-coletiva",
+        "title": "Comercialização Coletiva para a Indústria",
+        "description": "Ao reunir volume e qualidade em conjunto, a cooperativa realiza a venda coletiva para a indústria de reciclagem, conquistando preços mais justos e revertendo a renda diretamente para os trabalhadores cooperados.",
+        "icon": "Factory",
+        "details": [
+          "Venda coletiva com maior poder de negociação e sem exploração",
+          "Retorno da matéria-prima para fabricação de novos produtos",
+          "Partilha justa do resultado financeiro entre os cooperados"
+        ]
+      }
+    ],
+    "closingNote": "Quando você separa corretamente seus resíduos em casa, o trabalho na bancada de triagem torna-se mais rápido, seguro e produtivo para todas as famílias da cooperativa."
+  },
+  "autogestao": {
+    "sectionTitle": "Autogestão e Economia Solidária",
+    "subtitle": "Na Cooperativa Recicla VR não existe patrão: somos todos trabalhadores, donos e gestores do nosso empreendimento coletivo.",
+    "intro": "Nossa cooperativa é guiada pelos princípios da Autogestão e da Economia Solidária. Isso significa que o trabalho humano está acima do capital e que todas as decisões e resultados pertencem coletivamente a quem trabalha no galpão.",
+    "theoreticalFoundation": {
+      "title": "O que é Economia Solidária e Autogestão?",
+      "authorReference": "Inspirado no pensamento de Paul Singer e no movimento brasileiro de Economia Solidária",
+      "quote": "A economia solidária é um outro modo de produção, cujos princípios básicos são a propriedade coletiva ou associada do capital e o direito à liberdade individual.",
+      "explanation": "Como explicava o economista e professor Paul Singer, grande referência da Economia Solidária no Brasil, enquanto em uma empresa tradicional existe a hierarquia entre patrão (que detém o lucro e o comando) e empregados assalariados, na cooperativa autogestionária todos os membros são sócios com direitos iguais. A solidariedade substitui a competição e o trabalho associado promove cidadania e emancipação social."
+    },
+    "pillars": [
+      {
+        "id": "assembleias-gerais",
+        "title": "Decisões Coletivas em Assembleias Gerais",
+        "description": "Todas as decisões importantes da cooperativa — normas de trabalho, prestação de contas, parcerias e investimentos — são debatidas e decididas coletivamente em Assembleia Geral.",
+        "icon": "Vote"
+      },
+      {
+        "id": "igualdade-direitos",
+        "title": "Direitos Iguais: Cada Pessoa, Um Voto",
+        "description": "Na Recicla VR, todos os cooperados e cooperadas têm exatamente o mesmo valor. Nas votações em assembleia, cada trabalhador tem direito a um voto, com liberdade de expressão e transparência.",
+        "icon": "Users"
+      },
+      {
+        "id": "distribuicao-renda",
+        "title": "Renda Distribuída pelo Trabalho Coletivo",
+        "description": "Não existe lucro acumulado nas mãos de um dono. Após cobrir os custos de manutenção do galpão, todo o valor arrecadado com a venda dos recicláveis é partilhado de forma justa entre os cooperados conforme o trabalho realizado.",
+        "icon": "Scale"
+      },
+      {
+        "id": "tecnologia-social",
+        "title": "Saberes Populares e Tecnologia Social",
+        "description": "Unimos o conhecimento prático acumulado pelos catadores desde 2002 com o conhecimento acadêmico de universidades públicas como a UFF para aprimorar processos, gestão e educação ambiental.",
+        "icon": "BookOpen"
+      }
+    ],
+    "assemblyProcess": {
+      "title": "Como Praticamos a Autogestão no Dia a Dia",
+      "description": "A democracia dentro do galpão acontece na prática, por meio do diálogo constante e da responsabilidade compartilhada:",
+      "points": [
+        "Reuniões e Assembleias Gerais periódicas com participação de todos os cooperados e cooperadas;",
+        "Prestação de contas aberta sobre pesagens, vendas de fardos, despesas e rateio financeiro;",
+        "Eleição democrática dos representantes da diretoria e do conselho fiscal pelos próprios trabalhadores;",
+        "Organização coletiva das escalas, funções de triagem, prensagem, limpeza e atendimento aos parceiros."
+      ]
+    }
+  },
+  "comoReciclar": {
+    "sectionTitle": "Como Reciclar em Volta Redonda",
+    "subtitle": "Separar os resíduos na sua casa, condomínio ou trabalho é simples e faz toda a diferença para o meio ambiente e para os catadores.",
+    "intro": "O primeiro passo para uma reciclagem eficiente começa dentro de casa: basta não misturar os materiais recicláveis secos com os resíduos orgânicos e rejeitos. Confira nossas regras práticas:",
+    "goldenRules": [
+      {
+        "title": "1. Separe o Seco do Úmido",
+        "description": "Tenha dois recipientes ou sacolas: um para os Resíduos Secos (recicláveis) e outro para os Resíduos Orgânicos e Rejeitos (restos de comida e lixo de banheiro).",
+        "icon": "Layers"
+      },
+      {
+        "title": "2. Esvazie Líquidos e Retire Excessos",
+        "description": "Esvazie totalmente garrafas, latas e caixas de leite. Não precisa gastar água limpa lavando com sabão: basta passar um guardanapo usado ou a água do enxágue da louça para tirar restos de alimentos.",
+        "icon": "Droplets"
+      },
+      {
+        "title": "3. Mantenha os Recicláveis Secos",
+        "description": "Papéis e papelões molhados ou sujos de gordura e restos de comida perdem a qualidade e podem contaminar toda a sacola de recicláveis.",
+        "icon": "Sparkles"
+      },
+      {
+        "title": "4. Embale Vidros Quebrados com Segurança",
+        "description": "Proteja as mãos de quem trabalha na triagem! Cacos de vidro e objetos cortantes devem ser embalados em garrafa PET ou caixa grossa e identificados por fora.",
+        "icon": "ShieldAlert"
+      }
+    ],
+    "dryVsWetComparison": {
+      "dryTitle": "Resíduos Secos (Recicláveis — Vão para a Recicla VR)",
+      "dryDescription": "Materiais limpos e secos que podem ser triados no galpão e transformados em matéria-prima novamente:",
+      "dryExamples": [
+        "Papéis, jornais, revistas, cadernos e caixas de papelão desmontadas",
+        "Garrafas PET, frascos de limpeza/higiene, potes plásticos e tampinhas",
+        "Latas de alumínio (bebidas), latas de aço (alimentos), tampas e sucatas metálicas",
+        "Garrafas e potes de vidro inteiros (ou quebrados devidamente embalados e identificados)",
+        "Embalagens longa vida (caixas de leite, suco e creme de leite secas)",
+        "Tampinhas plásticas, lacres de alumínio e pequenos cabos/sucatas eletrônicas"
+      ],
+      "wetTitle": "Orgânicos e Rejeitos (NÃO vão para a Cooperativa)",
+      "wetDescription": "Resíduos úmidos ou sem viabilidade de reciclagem no galpão, que devem ir para a compostagem ou coleta domiciliar comum:",
+      "wetExamples": [
+        "Restos de comida, cascas de frutas, legumes, borra de café e ossos",
+        "Papel higiênico usado, lenços de papel, fraldas descartáveis e absorventes",
+        "Papéis engordurados, guardanapos sujos, fotografias e etiquetas adesivas",
+        "Poeira de varrição, bitucas de cigarro e fezes de animais",
+        "Seringas, agulhas, curativos e resíduos de serviços de saúde",
+        "Espelhos quebrados, cerâmicas, porcelanas e lâmpadas fluorescentes"
+      ]
+    }
+  },
+  "separacaoResiduos": {
+    "sectionTitle": "Guia Detalhado de Separação de Resíduos",
+    "subtitle": "Saiba exatamente o que pode e o que NÃO pode ser reciclado em cada categoria de material.",
+    "intro": "Consulte os cartões abaixo sempre que tiver dúvida na hora de descartar uma embalagem. Uma separação bem feita evita acidentes no galpão e aumenta o reaproveitamento dos materiais!",
+    "categories": [
+      {
+        "id": "papel-papelao",
+        "name": "Papel e Papelão",
+        "colorCode": "blue",
+        "icon": "FileText",
+        "description": "Papéis e caixas de papelão secos são amplamente recicláveis e muito importantes para a cooperativa.",
+        "canRecycle": [
+          "Caixas de papelão de entregas e supermercado (desmontadas)",
+          "Folhas de papel sulfite, rascunhos de escritório e folhas de caderno",
+          "Jornais, revistas, livros antigos, apostilas e panfletos",
+          "Sacos de papel limpos, envelopes e cartolinas",
+          "Caixas de ovos de papelão e rolos internos de papel higiênico/toalha",
+          "Embalagens longa vida (Tetra Pak de leite e suco, esvaziadas)"
+        ],
+        "cannotRecycle": [
+          "Papel higiênico usado e lenços de papel sujos",
+          "Guardanapos e caixas de pizza sujos de gordura ou queijo",
+          "Papel carbono, papel celofane e papéis plastificados/parafinados",
+          "Comprovantes térmicos de cartão/banco e etiquetas com cola adesiva",
+          "Fotografias antigas e fitas crepe/adesivas"
+        ],
+        "preparationTips": [
+          "Desmonte as caixas de papelão para economizar espaço na sacola e no transporte.",
+          "Retire espirais plásticos ou metálicos de cadernos e agendas antes de descartar.",
+          "Guarde os papéis sempre longe de líquidos e umidade."
+        ]
+      },
+      {
+        "id": "plasticos",
+        "name": "Plásticos",
+        "colorCode": "red",
+        "icon": "Milk",
+        "description": "Garrafas, frascos e embalagens plásticas têm alto potencial de reciclagem quando descartados sem resíduos líquidos.",
+        "canRecycle": [
+          "Garrafas PET de refrigerante, água mineral, suco e óleo de cozinha",
+          "Frascos de shampoo, condicionador, sabonete líquido e cosméticos",
+          "Embalagens de detergente, amaciante, água sanitária e desinfetante",
+          "Potes de margarina, sorvete, iogurte, requeijão e maionese (sem excesso)",
+          "Tampinhas plásticas de todos os tamanhos, sacolas plásticas limpas e plástico filme",
+          "Baldes, bacias, cadeiras plásticas quebradas e canos/tubos de PVC"
+        ],
+        "cannotRecycle": [
+          "Cabos de panela (baquelite), tomadas e interruptores elétricos",
+          "Esponjas de lavar louça, espuma de colchão e isopor sujo de comida",
+          "Embalagens plásticas de agrotóxicos, combustíveis ou produtos químicos tóxicos",
+          "Fraldas descartáveis, absorventes e hastes flexíveis (cotonetes)",
+          "Adesivos plásticos e acrílicos"
+        ],
+        "preparationTips": [
+          "Esvazie completamente o líquido das garrafas PET e amasse-as para reduzir o volume.",
+          "Rosqueie a tampinha de volta na garrafa ou junte as tampinhas em um pote separado.",
+          "Em potes de iogurte ou margarina, passe um guardanapo usado ou enxágue rápido."
+        ]
+      },
+      {
+        "id": "metais",
+        "name": "Metais",
+        "colorCode": "yellow",
+        "icon": "Wrench",
+        "description": "O alumínio e o aço podem ser reciclados infinitas vezes sem perder suas propriedades, economizando muita energia.",
+        "canRecycle": [
+          "Latas de alumínio de refrigerante, suco e cerveja",
+          "Latas de aço de alimentos (milho, ervilha, leite em pó, extrato de tomate, sardinha)",
+          "Tampinhas metálicas de garrafas e tampas de potes de vidro",
+          "Panelas de alumínio ou inox (preferencialmente sem o cabo de baquelite)",
+          "Talheres, ferramentas antigas, pregos, parafusos e ferragens (embalados com cuidado)",
+          "Fios de cobre, alumínio, bronze e sucatas de ferro em geral"
+        ],
+        "cannotRecycle": [
+          "Esponjas de aço usadas (tipo Bombril) e lãs de aço enferrujadas",
+          "Latas com restos de tinta tóxica, verniz, solvente ou veneno",
+          "Pilhas e baterias soltas no saco de recicláveis (devem ir para pontos coletores próprios)",
+          "Grampos cirúrgicos ou agulhas metálicas"
+        ],
+        "preparationTips": [
+          "Retire o excesso de alimento das latas de conserva e dobre a tampa metálica para dentro da lata para não cortar ninguém.",
+          "Se puder, amasse as latinhas de alumínio para facilitar o armazenamento."
+        ]
+      },
+      {
+        "id": "vidros",
+        "name": "Vidros (Cuidado com Cacos!)",
+        "colorCode": "green",
+        "icon": "Wine",
+        "description": "O vidro é 100% reciclável, mas exige atenção especial no manuseio para evitar acidentes graves na cooperativa.",
+        "canRecycle": [
+          "Garrafas de vidro de suco, refrigerante, cerveja, vinho e azeite",
+          "Potes de vidro de conserva, palmito, azeitona, geleia, mel e café solúvel",
+          "Frascos de vidro de perfumes e cosméticos (vazios)",
+          "Cacos de embalagens de vidro SOMENTE se estiverem embalados com total segurança e identificados"
+        ],
+        "cannotRecycle": [
+          "Espelhos de qualquer tamanho e vidros planos temperados/blindex ou de automóveis",
+          "Lâmpadas fluorescentes, de LED ou incandescentes",
+          "Pratos, xícaras e tigelas de cerâmica, barro ou porcelana",
+          "Travessas refratárias resistentes ao forno (tipo Pirex/Marinex)",
+          "Telas de televisão, monitores, celulares e ampolas de medicamentos"
+        ],
+        "preparationTips": [
+          "Retire todo o líquido das garrafas e potes de vidro.",
+          "NUNCA jogue vidro quebrado solto na sacola! Coloque os cacos dentro de uma garrafa PET cortada ou caixa de leite, lacre com fita adesiva e escreva bem visível: 'CUIDADO: VIDRO QUEBRADO'."
+        ]
+      },
+      {
+        "id": "oleo-especiais",
+        "name": "Itens Especiais e Eletroeletrônicos",
+        "colorCode": "amber",
+        "icon": "Sparkles",
+        "description": "Tampinhas, lacres de alumínio e pequenos cabos ou sucatas eletrônicas também têm destino certo na nossa cooperativa.",
+        "canRecycle": [
+          "Tampinhas plásticas separadas para campanhas socioambientais",
+          "Lacres de latinhas de alumínio reunidos em garrafas PET ou potes",
+          "Pequenos cabos, fios e sucatas eletroeletrônicas (consulte nossa equipe para grandes volumes)",
+          "Embalagens plásticas de óleo vazias e secas (sem líquido dentro)"
+        ],
+        "cannotRecycle": [
+          "Óleo de cozinha usado ou gordura de fritura (NÃO recebemos óleo no galpão)",
+          "Óleo automotivo, lubrificante de motor ou combustíveis",
+          "Pilhas e baterias soltas ou vazando ácido",
+          "Medicamentos vencidos e embalagens de remédios cheias (entregue em farmácias)"
+        ],
+        "preparationTips": [
+          "Junte as tampinhas plásticas limpas e secas em sacolas ou garrafas de boca larga.",
+          "Guarde os lacres de alumínio dentro de garrafas PET secas para facilitar o transporte e a pesagem.",
+          "Para entregar cabos e sucatas eletroeletrônicas em maior quantidade, envie uma mensagem antes pelo nosso WhatsApp."
+        ]
+      }
+    ],
+    "specialSafetyNotice": {
+      "title": "Atenção à Segurança: Proteja as Mãos dos Catadores e Catadoras!",
+      "description": "Na Cooperativa Recicla VR, toda a separação final na esteira/bancada é feita por pessoas. Um único caco de vidro solto, lata aberta ou agulha pode causar ferimentos graves e afastar um trabalhador do sustento da sua família.",
+      "tips": [
+        "Embale vidros quebrados em garrafa PET ou caixa Tetra Pak lacrada e identifique como 'VIDRO QUEBRADO'.",
+        "Dobre as tampas serrilhadas das latas de aço para dentro da própria lata.",
+        "Jamais coloque agulhas, seringas, lâminas de barbear ou espetos de churrasco junto aos recicláveis."
+      ]
+    }
+  },
+  "entregaMateriais": {
+    "sectionTitle": "Entrega de Materiais",
+    "subtitle": "Saiba como moradores, condomínios, escolas e empresas de Volta Redonda podem destinar seus recicláveis para a Recicla VR.",
+    "intro": "Toda quantidade de material reciclável limpo e seco é bem-vinda! Você pode trazer diretamente ao nosso galpão no Bairro Sessenta ou entrar em contato para organizar entregas e coletas parceiras.",
+    "modalities": [
+      {
+        "id": "entrega-direta-galpao",
+        "title": "Entrega Direta no Galpão da Cooperativa",
+        "audience": "Moradores, famílias, estudantes e pequenos comércios",
+        "description": "Você pode entregar seus recicláveis diretamente em nossa sede no Bairro Sessenta. É rápido, prático e você ainda conhece de perto o trabalho dos nossos cooperados!",
+        "instructions": [
+          "Traga seus recicláveis secos separados em sacolas ou caixas (papel, plástico, metal, vidro e itens especiais secos).",
+          "Dirija-se ao nosso galpão na Rua 35, nº 650, Bairro Sessenta, Volta Redonda - RJ.",
+          "Recebemos entregas de segunda a sexta-feira em horário comercial."
+        ],
+        "ctaLabel": "Ver Endereço no Google Maps",
+        "ctaType": "maps"
+      },
+      {
+        "id": "condominios-bairros",
+        "title": "Condomínios Residenciais e Vizinhanças",
+        "audience": "Síndicos, administradoras, porteiros e associações de moradores",
+        "description": "Organize a coleta seletiva no seu prédio ou conjunto residencial! Quando o condomínio acumula os recicláveis de forma limpa e organizada, podemos alinhar a frequência ideal de entrega ou retirada.",
+        "instructions": [
+          "Separe um espaço coberto e arejado no condomínio para armazenar apenas resíduos secos.",
+          "Oriente os moradores com nosso Guia de Separação para evitar lixo orgânico misturado.",
+          "Fale conosco pelo WhatsApp para combinar os dias de recolhimento ou entrega programada."
+        ],
+        "ctaLabel": "Agendar pelo WhatsApp",
+        "ctaType": "whatsapp"
+      },
+      {
+        "id": "empresas-escolas-instituicoes",
+        "title": "Empresas, Comércios, Escolas e Universidades",
+        "audience": "Lojas, supermercados, escritórios, indústrias e instituições de ensino",
+        "description": "Destine caixas de papelão, plásticos de embalagem, papéis de arquivo, latinhas e outros recicláveis com responsabilidade socioambiental para a Recicla VR.",
+        "instructions": [
+          "Reúna caixas de papelão desmontadas, plásticos filme e papéis limpos em local seco.",
+          "Para escolas e universidades, organize pontos de entrega voluntária ou mutirões educativos.",
+          "Entre em contato pelo nosso WhatsApp ou e-mail para firmar parceria contínua."
+        ],
+        "ctaLabel": "Falar com a Cooperativa",
+        "ctaType": "whatsapp"
+      }
+    ],
+    "acceptedVolumeInfo": "Recebemos desde pequenas sacolas trazidas por moradores no galpão até grandes volumes de papelão, plásticos e metais de condomínios, escolas e empresas. Em caso de grandes quantidades, avise nossa equipe pelo WhatsApp para prepararmos o recebimento ou agendamento!"
+  },
+  "impactoSocialAmbiental": {
+    "sectionTitle": "Impacto Social e Ambiental",
+    "subtitle": "Cada tonelada reciclada pela Cooperativa Recicla VR transforma vidas humanas e protege o meio ambiente de Volta Redonda.",
+    "intro": "A reciclagem realizada por uma cooperativa de catadores gera um duplo benefício que nenhuma máquina sozinha consegue alcançar: une a preservação ecológica com a inclusão social e a distribuição justa de renda na nossa cidade.",
+    "metrics": [
+      {
+        "id": "trajetoria-anos",
+        "value": "+20 Anos",
+        "label": "De História em Volta Redonda",
+        "description": "Atuação contínua desde 2002 na luta pelos direitos dos catadores e pela coleta seletiva.",
+        "icon": "Award"
+      },
+      {
+        "id": "autogestao-renda",
+        "value": "100%",
+        "label": "Trabalho Digno e Autogestionário",
+        "description": "Toda a renda obtida com os recicláveis é dividida diretamente entre as famílias cooperadas.",
+        "icon": "Users"
+      },
+      {
+        "id": "reducao-aterro",
+        "value": "Toneladas",
+        "label": "Desviadas de Aterros Todos os Meses",
+        "description": "Papéis, plásticos, metais e vidros que voltam ao ciclo produtivo em vez de poluir o solo e os rios.",
+        "icon": "Recycle"
+      },
+      {
+        "id": "educacao-comunidade",
+        "value": "Rede Viva",
+        "label": "De Educação Ambiental e Tecnologia Social",
+        "description": "Articulação com moradores, escolas, empresas, CACS-VR e universidades como a UFF.",
+        "icon": "TreePine"
+      }
+    ],
+    "socialImpacts": [
+      {
+        "title": "Geração de Trabalho Decente e Renda para Famílias",
+        "description": "Garantimos sustento digno, autonomia financeira e inclusão produtiva para trabalhadores e trabalhadoras de Volta Redonda historicamente vulnerabilizados, fortalecendo a economia local."
+      },
+      {
+        "title": "Empoderamento, Cidadania e Valorização Profissional",
+        "description": "Por meio da autogestão e das assembleias, os cooperados exercitam a liderança comunitária, o protagonismo feminino e o reconhecimento como Agentes do Meio Ambiente."
+      },
+      {
+        "title": "Saúde, Segurança e Trabalho Coletivo no Galpão",
+        "description": "O trabalho organizado em cooperativa oferece melhores condições de ergonomia, prensagem mecanizada e apoio mútuo em comparação ao trabalho desprotegido nas ruas."
+      }
+    ],
+    "environmentalImpacts": [
+      {
+        "title": "Aumento da Vida Útil dos Aterros Sanitários",
+        "description": "Ao reintroduzir materiais recicláveis na indústria, reduzimos drasticamente o volume de lixo enterrado e evitamos a geração de chorume e gases de efeito estufa."
+      },
+      {
+        "title": "Economia de Água, Energia Elétrica e Recursos Naturais",
+        "description": "Reciclar alumínio economiza até 95% de energia; reciclar papel e papelão preserva árvores e água; reciclar plástico e vidro reduz a extração de petróleo e minérios."
+      },
+      {
+        "title": "Prevenção de Enchentes e Proteção do Rio Paraíba do Sul",
+        "description": "Retirar plásticos, garrafas PET e óleo de cozinha do descarte incorreto evita o entupimento de bueiros em Volta Redonda e protege a bacia do Rio Paraíba do Sul."
+      }
+    ]
+  },
+  "parcerias": {
+    "sectionTitle": "Parcerias: Junte-se à Recicla VR",
+    "subtitle": "A gestão sustentável de resíduos é uma responsabilidade compartilhada por toda a cidade. Veja como fazer parte da nossa rede.",
+    "intro": "A Cooperativa Recicla VR está de portas abertas para construir parcerias duradouras com quem deseja fazer a diferença em Volta Redonda. Escolha o seu perfil abaixo e venha caminhar conosco:",
+    "partnerGroups": [
+      {
+        "id": "moradores-condominios",
+        "title": "Moradores e Condomínios",
+        "icon": "Home",
+        "subtitle": "Coleta seletiva na sua casa, rua ou prédio",
+        "description": "Mobilize sua família, seus vizinhos e o síndico do seu condomínio para separar os resíduos secos e destiná-los regularmente à nossa cooperativa.",
+        "benefits": [
+          "Orientação prática sobre como organizar as lixeiras de recicláveis no prédio",
+          "Redução do volume de lixo comum e maior limpeza nos espaços coletivos",
+          "Apoio direto à geração de renda de famílias trabalhadoras de Volta Redonda"
+        ],
+        "howToJoin": "Comece separando os resíduos secos hoje mesmo! Para condomínios, entre em contato pelo WhatsApp para combinar entregas ou coletas programadas.",
+        "ctaLabel": "Quero Cadastrar Meu Condomínio"
+      },
+      {
+        "id": "empresas-comercios",
+        "title": "Empresas e Comércios",
+        "icon": "Building2",
+        "subtitle": "Sustentabilidade, ESG e Destinação Correta",
+        "description": "Comércios, supermercados, escritórios, clínicas e indústrias de Volta Redonda podem destinar papelão, plásticos, papéis e sucatas para a Recicla VR.",
+        "benefits": [
+          "Cumprimento da Política Nacional de Resíduos Sólidos (Lei nº 12.305/2010)",
+          "Fortalecimento das práticas de responsabilidade socioambiental (ESG) no município",
+          "Destinação correta de grandes volumes de caixas, embalagens e arquivos inativos"
+        ],
+        "howToJoin": "Fale com a nossa equipe pelo WhatsApp ou e-mail para alinhar o tipo de material gerado pela sua empresa e a logística de entrega ou retirada.",
+        "ctaLabel": "Ser Empresa Parceira"
+      },
+      {
+        "id": "escolas-ensino",
+        "title": "Escolas e Instituições de Ensino",
+        "icon": "School",
+        "subtitle": "Educação Ambiental na Prática com Crianças e Jovens",
+        "description": "Escolas públicas e privadas podem transformar a educação ambiental em ação concreta por meio de campanhas de coleta seletiva, gincanas e diálogos com os agentes ambientais.",
+        "benefits": [
+          "Vivência prática sobre cidadania, sustentabilidade e Economia Solidária para os alunos",
+          "Arrecadação solidária de materiais recicláveis, tampinhas plásticas e lacres de alumínio",
+          "Possibilidade de agendamento de rodas de conversa e visitas pedagógicas orientadas"
+        ],
+        "howToJoin": "Professores, coordenadores e diretores podem entrar em contato conosco para planejar atividades educativas ou campanhas na escola.",
+        "ctaLabel": "Levar para Minha Escola"
+      },
+      {
+        "id": "universidades-extensao",
+        "title": "Universidades e Projetos de Extensão",
+        "icon": "GraduationCap",
+        "subtitle": "Tecnologia Social, Pesquisa e Extensão Universitária (Destaque UFF)",
+        "description": "Acreditamos na aliança entre o saber popular dos catadores e o conhecimento científico das universidades para criar soluções reais voltadas à autogestão e à inclusão social.",
+        "benefits": [
+          "Desenvolvimento conjunto de Tecnologias Sociais aplicadas ao cooperativismo popular",
+          "Campo aberto para projetos de extensão, estágios vivenciais e pesquisas acadêmicas éticas",
+          "Parceria consolidada com a UFF (Universidade Federal Fluminense) em Volta Redonda"
+        ],
+        "howToJoin": "Docentes, estudantes e grupos de extensão universitária podem nos contatar para propor ações colaborativas que fortaleçam a cooperativa.",
+        "ctaLabel": "Propor Projeto Universitário"
+      }
+    ],
+    "uffHighlight": {
+      "badge": "Parceria Universitária • Extensão e Tecnologia Social",
+      "title": "Cooperativa Recicla VR & UFF (Universidade Federal Fluminense)",
+      "description": "Este portal institucional e educativo é fruto de um projeto de Tecnologia Social desenvolvido em parceria com estudantes e professores da UFF em Volta Redonda. A iniciativa une comunicação comunitária, educação ambiental e ferramentas digitais gratuitas de código aberto para que os próprios cooperados e parceiros possam atualizar o site com autonomia, sem depender de programação.",
+      "actionsSummary": [
+        "Resgate e valorização da história da Cooperativa Recicla VR desde 2002 e do seu acervo digital de 2015",
+        "Difusão dos conceitos de Autogestão, Economia Solidária e Educação Ambiental para toda a população de Volta Redonda",
+        "Autonomia tecnológica por meio de um Painel de Edição Visual simples e acessível em língua portuguesa"
+      ]
+    }
+  },
+  "faq": {
+    "sectionTitle": "Perguntas Frequentes (FAQ)",
+    "subtitle": "Tire suas principais dúvidas sobre separação de resíduos, entrega de materiais, visitas e funcionamento da Cooperativa Recicla VR.",
+    "intro": "Reunimos abaixo as respostas para as dúvidas mais comuns enviadas pelos moradores, síndicos, escolas e comerciantes de Volta Redonda:",
+    "items": [
+      {
+        "id": "faq-lavar-embalagens",
+        "category": "Separação e Higiene",
+        "question": "1. Preciso lavar todas as embalagens com água e sabão antes de enviar para a reciclagem?",
+        "answer": "Não é necessário gastar água potável nem detergente! O mais importante é esvaziar completamente os líquidos (de garrafas, caixinhas de leite e latas) e retirar o excesso de comida usando um guardanapo usado ou apenas a água que já sobrou do enxágue da louça. Isso evita mau cheiro na sua casa, impede a atração de insetos e garante um ambiente digno e higiênico para os cooperados na bancada de triagem."
+      },
+      {
+        "id": "faq-vidro-quebrado",
+        "category": "Segurança",
+        "question": "2. Como devo embalar copos, garrafas ou potes de vidro quebrados para não machucar os catadores?",
+        "answer": "Nunca jogue cacos de vidro soltos dentro de sacolas plásticas! A triagem na cooperativa é manual e cacos soltos causam cortes graves. Coloque os cacos dentro de uma garrafa PET cortada, de uma caixa de leite (Tetra Pak) ou envolva em várias camadas de jornal grosso, feche bem com fita adesiva e escreva por fora em letras grandes: 'CUIDADO: VIDRO QUEBRADO'."
+      },
+      {
+        "id": "faq-materiais-aceitos",
+        "category": "Materiais",
+        "question": "3. Quais materiais a Cooperativa Recicla VR recebe e quais materiais NÃO são aceitos?",
+        "answer": "Recebemos todos os resíduos recicláveis secos: papéis, jornais, revistas, caixas de papelão, embalagens Tetra Pak, garrafas PET, frascos plásticos de limpeza e higiene, sacolas limpas, tampinhas, latas de alumínio e de aço, sucatas metálicas, embalagens de vidro e itens especiais secos (lacres e pequenos cabos/eletrônicos). Não recebemos óleo de cozinha usado, lixo orgânico (restos de comida), lixo de banheiro (papel higiênico, fraldas, absorventes), seringas/agulhas, lâmpadas fluorescentes, espelhos, cerâmicas ou embalagens de produtos tóxicos."
+      },
+      {
+        "id": "faq-entrega-coleta",
+        "category": "Entrega e Coleta",
+        "question": "4. Posso entregar meus recicláveis diretamente no galpão ou agendar coleta para grandes volumes?",
+        "answer": "Sim! Qualquer pessoa pode entregar materiais recicláveis diretamente em nosso galpão na Rua 35, nº 650, Bairro Sessenta, Volta Redonda - RJ, de segunda a sexta-feira em horário comercial. Para condomínios, escolas, comércios e empresas que reúnem volumes maiores de papelão, plástico ou metal, basta entrar em contato pelo nosso WhatsApp para alinharmos o agendamento ou fluxo de coleta parceira."
+      },
+      {
+        "id": "faq-oleo-cozinha",
+        "category": "Materiais",
+        "question": "5. A cooperativa recebe óleo de cozinha usado, tampinhas e sucatas eletrônicas?",
+        "answer": "Não recebemos óleo de cozinha usado no galpão da Recicla VR, pois trabalhamos exclusivamente com materiais recicláveis secos. Porém, recebemos com muito carinho itens especiais secos como tampinhas plásticas, lacres de latinhas de alumínio e pequenos cabos ou sucatas eletroeletrônicas (para grandes volumes de eletrônicos, fale antes conosco pelo WhatsApp!)."
+      },
+      {
+        "id": "faq-visitas-escolas-uff",
+        "category": "Educação e Parcerias",
+        "question": "6. Escolas, universidades e projetos de extensão podem visitar o galpão da Recicla VR?",
+        "answer": "Com certeza! A Educação Ambiental e a troca de saberes com estudantes, professores e pesquisadores (como nossa parceria com a UFF) fazem parte da nossa missão. Para que possamos receber o grupo com segurança e atenção sem interromper a operação das prensas e da triagem, pedimos que o agendamento seja feito previamente pelo nosso WhatsApp ou e-mail."
+      },
+      {
+        "id": "faq-divisao-renda-autogestao",
+        "category": "Autogestão",
+        "question": "7. A cooperativa tem um dono ou patrão? Para onde vai o dinheiro dos materiais reciclados?",
+        "answer": "Na Cooperativa Recicla VR não existe patrão! Somos um empreendimento de Economia Solidária e Autogestão onde todos os trabalhadores são sócios-cooperados com direitos iguais e decisões tomadas em Assembleia Geral. Tudo o que é arrecadado com a venda coletiva dos recicláveis, após o pagamento das despesas básicas do galpão, é dividido diretamente entre os catadores e catadoras que trabalharam."
+      },
+      {
+        "id": "faq-como-apoiar",
+        "category": "Comunidade",
+        "question": "8. Mesmo gerando pouco resíduo em casa, como posso apoiar o trabalho da Cooperativa Recicla VR?",
+        "answer": "Todo apoio faz diferença! Você pode separar corretamente seus recicláveis secos, levar pequenas quantidades ao nosso galpão ou entregá-las à coleta seletiva, incentivar seu condomínio, escola ou local de trabalho a se tornar parceiro da Recicla VR, seguir e compartilhar nossas redes sociais (Instagram e Facebook) e divulgar este site para seus amigos e vizinhos em Volta Redonda."
+      }
+    ]
+  },
+  "contatoLocalizacao": {
+    "sectionTitle": "Localização e Contato",
+    "subtitle": "Venha conhecer nosso galpão no Bairro Sessenta, entregar seus materiais recicláveis ou conversar sobre parcerias.",
+    "intro": "Estamos localizados em uma região central e de fácil acesso em Volta Redonda. Fale conosco pelo WhatsApp, acompanhe nossas redes sociais ou visite nossa sede!",
+    "address": {
+      "street": "Rua 35",
+      "number": "nº 650",
+      "neighborhood": "Bairro Sessenta",
+      "city": "Volta Redonda",
+      "state": "RJ",
+      "zipCode": "27261-190",
+      "complement": "Galpão da Cooperativa Recicla VR",
+      "reference": "Próximo à região central do Bairro Sessenta, Volta Redonda - RJ",
+      "fullAddress": "Rua 35, nº 650, Bairro Sessenta, Volta Redonda - RJ",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Rua+35,+650+-+Sessenta,+Volta+Redonda+-+RJ",
+      "googleMapsEmbedQuery": "Rua 35, 650 - Sessenta, Volta Redonda - RJ"
+    },
+    "openingHours": {
+      "weekdays": "Segunda a Sexta-feira: das 08h00 às 17h00",
+      "saturday": "Sábados: Fechado (ou conforme agendamentos especiais)",
+      "sunday": "Domingos e Feriados: Fechado",
+      "notes": "Para entregas de grandes volumes com caminhão ou visitas de grupos escolares/universitários, recomendamos avisar previamente pelo WhatsApp."
+    },
+    "contacts": {
+      "whatsappNumber": "5524998329583",
+      "whatsappDisplay": "(24) 99832-9583",
+      "whatsappMessage": "Olá! Acessei o site da Cooperativa Recicla VR e gostaria de informações sobre entrega de materiais recicláveis / parcerias.",
+      "phoneDisplay": "(24) 99832-9583",
+      "email": "contato@reciclavr.org.br"
+    },
+    "socialLinks": {
+      "instagramUrl": "https://www.instagram.com/reciclarvr/",
+      "instagramHandle": "@reciclarvr",
+      "facebookUrl": "https://www.facebook.com/reciclavr",
+      "facebookName": "Cooperativa Recicla VR",
+      "blogUrl": "https://reciclavr.blogspot.com/?m=1",
+      "blogLabel": "Blog Histórico de 2015 (reciclavr.blogspot.com)"
+    },
+    "footer": {
+      "copyright": "© Cooperativa Recicla VR — Cooperativa Popular dos Agentes do Meio Ambiente do Município de Volta Redonda. Todos os direitos reservados.",
+      "uffCredit": "Projeto de Tecnologia Social desenvolvido em parceria com estudantes e docentes da UFF (Universidade Federal Fluminense).",
+      "socialTechNote": "Site 100% gratuito, acessível e com Painel de Edição Visual sem programação para autonomia dos cooperados."
+    }
+  },
+  "cursoAutogestao": {
+    "header": {
+      "badge": "Escola de Autogestão • Recicla VR & UFF",
+      "title": "Curso Prático: Como Organizar Nossa Cooperativa",
+      "subtitle": "Aprenda de jeito simples como fazer entrevistas, dividir equipes, arrumar o galpão e organizar o trabalho do dia a dia sem precisar de patrão.",
+      "academicCredit": "Guia prático elaborado para apoiar a autogestão, a união das equipes e a organização diária do trabalho na Cooperativa Recicla VR.",
+      "audioHelperText": "Dica: Clique no botão 'Ouvir Aula' em qualquer módulo para o site ler o texto em voz alta para você!"
+    },
+    "modules": [
+      {
+        "id": "modulo-1-entrevista",
+        "moduleNumber": 1,
+        "title": "Como Conversar, Ouvir e Entrevistar Novos Colegas",
+        "shortTitle": "1. Conversa e Entrevista",
+        "icon": "MessageCircle",
+        "color": "emerald",
+        "academicSource": "Tema 1: Acolhimento, Escuta Ativa e Recepção de Novos Cooperados",
+        "summary": "Aprenda a receber novos cooperados, ouvir as ideias dos colegas de bancada e observar o trabalho no galpão com respeito, sem agir como chefe.",
+        "threeInstruments": {
+          "title": "Os 3 Jeitos de Conhecer e Ouvir Nossa Cooperativa",
+          "intro": "Para resolver problemas no galpão ou receber um novo trabalhador, existem 3 formas simples de levantar informações:",
+          "items": [
+            {
+              "name": "1. Conversa Olho no Olho (Entrevista)",
+              "badge": "A Melhor para o Nosso Galpão!",
+              "icon": "Users",
+              "description": "É uma conversa planejada e acolhedora. É o melhor jeito na cooperativa porque quem tem dificuldade de ler ou escrever pode falar livremente, contar sua história e mostrar o que sabe fazer."
+            },
+            {
+              "name": "2. Ficha de Perguntas (Questionário)",
+              "badge": "Bom para Registros Rápidos",
+              "icon": "FileText",
+              "description": "É uma folha simples com perguntas curtas para marcar com um [ X ]. Ajuda a guardar dados básicos (como telefone, endereço e tamanho da luva/bota), mas nunca substitui uma boa conversa."
+            },
+            {
+              "name": "3. Olhar o Dia a Dia no Galpão (Observação Pessoal)",
+              "badge": "Ver na Prática",
+              "icon": "Eye",
+              "description": "É acompanhar de perto como o trabalho acontece na bancada de triagem e na prensa para ver onde estão as dificuldades e como melhorar com a ajuda de todos."
+            }
+          ]
+        },
+        "goldenRulesTitle": "6 Regras de Ouro para uma Boa Conversa no Galpão",
+        "goldenRules": [
+          {
+            "number": 1,
+            "title": "Desligue o celular de verdade (nem no vibracall!)",
+            "description": "Quando for conversar com um colega ou entrevistar alguém novo, desligue o celular. Olhar para a tela ou atender ligação mostra falta de respeito com quem está falando."
+          },
+          {
+            "number": 2,
+            "title": "Deixe a pessoa à vontade e valorize o que ela diz",
+            "description": "Receba com um sorriso, ofereça água e um lugar tranquilo para sentar. Explique que na cooperativa todos têm valor igual e que a opinião dela é muito importante."
+          },
+          {
+            "number": 3,
+            "title": "Tenha uma listinha simples de perguntas antes de começar",
+            "description": "Não vá conversar no improviso. Tenha um roteiro simples na mão (o que perguntar sobre horários, saúde, trabalho em equipe e regras da assembleia) para não esquecer nada."
+          },
+          {
+            "number": 4,
+            "title": "Fale simples, não interrompa e NUNCA faça promessas falsas",
+            "description": "Use palavras do dia a dia, ouça até o fim sem cortar a fala da pessoa e seja 100% honesto sobre a renda: explique que o ganho depende da produção e da venda coletiva, evitando falsas expectativas."
+          },
+          {
+            "number": 5,
+            "title": "Não fique escrevendo sem parar durante assuntos delicados",
+            "description": "Se um colega estiver desabafando sobre um problema ou conflito no galpão, não fique anotando tudo na frente dele como se fosse um interrogatório. Primeiro acolha e escute!"
+          },
+          {
+            "number": 6,
+            "title": "Ao observar o trabalho no galpão, nunca aja como fiscal ou patrão",
+            "description": "Na autogestão não existe chefe vigiando empregado. Quando for observar a bancada ou a prensa para ajudar a melhorar o serviço, seja amigável, informal e converse junto com o grupo."
+          }
+        ],
+        "interactiveChecklist": {
+          "title": "Roteiro de Entrevista para Receber Novo Cooperado",
+          "subtitle": "Marque as caixinhas abaixo quando estiver recebendo um novo colega no galpão:",
+          "items": [
+            "Desliguei meu celular e escolhi um cantinho calmo do galpão para conversar.",
+            "Dei boas-vindas, perguntei o nome, o bairro onde mora e se já trabalhou com reciclagem.",
+            "Expliquei com clareza que aqui não tem patrão nem salário fixo: somos sócios e dividimos a renda do trabalho coletivo.",
+            "Expliquei os horários do galpão, o uso obrigatório de luvas/botas (EPIs) e a importância das Assembleias.",
+            "Ouvir com atenção as dúvidas e necessidades da pessoa sem interromper.",
+            "Apresentei o novo colega para toda a equipe da triagem e da prensa com respeito e alegria."
+          ]
+        },
+        "practiceQuiz": {
+          "question": "Durante a entrevista de um novo colega para a cooperativa, o que você DEVE fazer segundo o que aprendemos?",
+          "options": [
+            "Deixar o celular no bolso vibrando e prometer um valor alto de ganho fixo todo mês para animar a pessoa.",
+            "Desligar o celular, conversar com palavras simples, ouvir sem interromper e explicar com sinceridade como funciona a divisão coletiva da renda.",
+            "Ficar de cara fechada anotando tudo num caderno como se fosse um chefe fiscalizando."
+          ],
+          "correctIndex": 1,
+          "explanation": "Muito bem! Na autogestão, desligamos o celular para dar atenção total, falamos a verdade sem falsas promessas e tratamos cada pessoa com respeito e igualdade!"
+        }
+      },
+      {
+        "id": "modulo-2-equipes-processos",
+        "moduleNumber": 2,
+        "title": "Como Dividir Equipes e Trabalhar em Conjunto",
+        "shortTitle": "2. Equipes e Processos",
+        "icon": "Users",
+        "color": "sky",
+        "academicSource": "Tema 2: Divisão de Equipes, Preparação e Corrente Solidária de Trabalho",
+        "summary": "Entenda como o trabalho de um colega ajuda o trabalho do outro dentro do galpão e como preparar tudo antes de começar o dia.",
+        "processConcept": {
+          "title": "O que é um Processo no Nosso Galpão?",
+          "intro": "Processo é simplesmente o caminho que o material faz desde que entra pelo portão até virar renda para as nossas famílias. Ele tem 3 partes:",
+          "stages": [
+            {
+              "step": "1. ENTRADA (O que chega)",
+              "icon": "Truck",
+              "description": "Chegam as sacolas e caixas com recicláveis misturados vindos dos moradores, condomínios, escolas e empresas."
+            },
+            {
+              "step": "2. TRANSFORMAÇÃO (Nosso Trabalho)",
+              "icon": "Layers",
+              "description": "É o esforço coletivo da nossa equipe: receber, separar na bancada por tipo de plástico, papel, metal e vidro, prensar e amarrar."
+            },
+            {
+              "step": "3. SAÍDA (O Resultado)",
+              "icon": "PackageCheck",
+              "description": "Saem os fardos limpos, pesados e prontos para vender à indústria, gerando dinheiro justo para todos os cooperados!"
+            }
+          ]
+        },
+        "kitchenMetaphor": {
+          "title": "O Segredo da Cozinha Bem Organizada: 'Pôr Tudo no Lugar' e Dividir Equipes",
+          "intro": "Pense em como uma grande cozinha comunitária funciona sem confusão. No nosso galpão, usamos exatamente os mesmos dois segredos:",
+          "miseEnPlaceTitle": "1º Segredo: 'Pôr no Lugar' antes de começar (Preparação)",
+          "miseEnPlaceDescription": "Assim como o cozinheiro separa as panelas e os temperos antes de ligar o fogão, nós preparamos o galpão nos primeiros 15 minutos da manhã: vestimos as luvas e botas, posicionamos os Big Bags vazios perto da mesa, conferimos o arame da prensa e limpamos a bancada.",
+          "teamsTitle": "2º Segredo: Brigada de Trabalho (Cada Equipe na Sua Missão)",
+          "teamsDescription": "Quando todo mundo tenta fazer tudo ao mesmo tempo, ninguém consegue trabalhar direito. Por isso, decidimos juntos em Assembleia a divisão das nossas equipes:",
+          "teams": [
+            {
+              "name": "Equipe de Recebimento e Pátio",
+              "role": "Recebe moradores e caminhões, descarrega com segurança e abastece a mesa de triagem sem deixar faltar material."
+            },
+            {
+              "name": "Equipe de Bancada de Triagem",
+              "role": "Separa com atenção cada tipo de plástico (PET, PEAD, PP), papéis, papelão, latinhas e vidros nos recipientes certos."
+            },
+            {
+              "name": "Equipe de Prensagem e Pesagem",
+              "role": "Opera a prensa com segurança, amarra os fardos no padrão certo, pesa na balança e anota na ficha de produção."
+            },
+            {
+              "name": "Equipe de Limpeza, Apoio e Atendimento",
+              "role": "Mantém os corredores livres, cuida da cozinha/banheiro e acolhe visitantes, escolas e parceiros."
+            }
+          ]
+        },
+        "internalChain": {
+          "title": "Um Colega é o Parceiro do Outro (Corrente do Trabalho)",
+          "description": "Dentro do galpão, o seu trabalho entrega o material para o próximo colega continuar. Se uma etapa falha, todo mundo perde tempo:",
+          "chainSteps": [
+            "Quem RECEBE e organiza as sacolas facilita o trabalho de quem está na TRIAGEM;",
+            "Quem faz uma TRIAGEM limpa (sem misturar plásticos diferentes ou sujeira) ajuda quem está na PRENSA;",
+            "Quem faz um FARDO bem prensado e pesado garante uma VENDA melhor e mais renda para TODOS os cooperados!"
+          ]
+        },
+        "interactiveChecklist": {
+          "title": "Checklist Diário: Preparando Nosso Galpão antes de Começar",
+          "subtitle": "Confira com a equipe todas as manhãs antes de puxar a primeira sacola:",
+          "items": [
+            "Todos os cooperados já colocaram luvas, botas e equipamentos de proteção.",
+            "Os Big Bags e tambores vazios já estão presos e abertos ao lado da mesa de triagem.",
+            "Sabemos claramente quem está hoje no Recebimento, na Triagem, na Prensa e no Apoio.",
+            "A prensa e a balança foram conferidas e estão prontas com arame/fita por perto.",
+            "Os corredores de passagem estão livres para levar os bags cheios até a prensa."
+          ]
+        },
+        "practiceQuiz": {
+          "question": "Por que é importante 'pôr tudo no lugar' (preparar bags, luvas e equipamentos) e dividir as equipes antes de começar o trabalho no galpão?",
+          "options": [
+            "Apenas para deixar o galpão bonito caso apareça alguma visita de fora.",
+            "Porque evita correria, cansaço à toa e confusão, fazendo cada equipe ajudar a etapa seguinte a produzir mais e melhor para todos.",
+            "Para que uma equipe possa mandar nas outras equipes como se fosse chefe."
+          ],
+          "correctIndex": 1,
+          "explanation": "Certíssimo! Preparar os materiais antes de começar e dividir as tarefas em acordo coletivo evita desgaste físico e faz o trabalho render muito mais para toda a cooperativa!"
+        }
+      },
+      {
+        "id": "modulo-3-layout-galpao",
+        "moduleNumber": 3,
+        "title": "Como Arrumar o Espaço do Galpão (Layout)",
+        "shortTitle": "3. Espaço do Galpão",
+        "icon": "MapPin",
+        "color": "amber",
+        "academicSource": "Tema 3: Organização do Espaço Físico, Ergonomia e Segurança no Galpão",
+        "summary": "Aprenda a posicionar mesas, bags, prensa e entrada de moradores do jeito certo para diminuir o cansaço nas costas e evitar acidentes.",
+        "whyLayoutMatters": {
+          "title": "Por que a Arrumação do Galpão (Layout) Muda o Nosso Dia?",
+          "description": "Layout é o jeito como arrumamos as bancadas, os Big Bags, as prensas e as pilhas de fardos dentro do galpão. Um galpão bem arrumado diminui a dor nas costas, evita caminhadas longas carregando peso no sol ou na chuva, previne acidentes e aumenta a produção!",
+          "warningSignsTitle": "Sinais de Alerta de que o Galpão Precisa Ser Reorganizado:",
+          "warningSigns": [
+            "Montanhas de sacolas acumuladas no meio do caminho impedindo a passagem;",
+            "Cooperados andando longe demais com sacos pesados nas costas para chegar até a prensa;",
+            "Moradores e visitantes entrando no meio da área de máquinas pesadas sem saber onde entregar o material;",
+            "Ferramentas, arames e balança sumindo porque não têm um lugar fixo."
+          ]
+        },
+        "goldenRulesTitle": "5 Regras Práticas para Arrumar o Galpão da Recicla VR",
+        "goldenRules": [
+          {
+            "number": 1,
+            "title": "Deixe perto o que funciona junto (Caminho Curto)",
+            "description": "O material não deve dar voltas pelo galpão! A Entrada deve ficar perto da Triagem; a Mesa de Triagem deve ficar colada nos Big Bags; e a Prensa deve ficar logo ao lado de onde saem os Bags cheios."
+          },
+          {
+            "number": 2,
+            "title": "Atendimento aos moradores sempre na entrada do portão",
+            "description": "Reserve um espaço limpo e sinalizado logo na entrada (Rua 35, nº 650) para receber os moradores e parceiros. Assim eles entregam rápido e em segurança, sem precisar atravessar o galpão."
+          },
+          {
+            "number": 3,
+            "title": "Separe as máquinas pesadas e barulhentas da área de conversa",
+            "description": "As prensas hidráulicas fazem barulho e exigem atenção total. Elas devem ficar em uma área firme e separada do local onde fazemos reuniões, refeições e recebemos visitantes."
+          },
+          {
+            "number": 4,
+            "title": "Cada ferramenta e equipamento perto de quem usa",
+            "description": "A balança deve ficar entre a prensa e o estoque de fardos prontos. Os rolos de arame, vassouras, pás e EPIs devem ter um cantinho fixo ao alcance das mãos."
+          },
+          {
+            "number": 5,
+            "title": "Boa iluminação, ventilação e corredores sempre livres",
+            "description": "Enxergar bem na bancada evita cortes com vidro quebrado e ajuda a diferenciar os tipos de plástico. Mantenha corredores largos para passagem de carrinhos e ventilação aberta."
+          }
+        ],
+        "idealFlowSteps": [
+          "1. Portão de Entrada e Recebimento de Moradores",
+          "2. Área de Espera do Material Bruto (Coberta)",
+          "3. Bancada de Triagem Bem Iluminada e Ventilada",
+          "4. Big Bags Organizados por Cor/Tipo de Material",
+          "5. Área de Prensagem e Balança de Pesagem",
+          "6. Estoque de Fardos Prontos Pertinho da Saída do Caminhão"
+        ],
+        "interactiveChecklist": {
+          "title": "Inspeção Amigável do Espaço do Galpão",
+          "subtitle": "Caminhe pelo galpão com seus colegas e marque o que já está bom:",
+          "items": [
+            "A entrada do galpão está livre e sinalizada para receber moradores que trazem recicláveis.",
+            "Os corredores entre a bancada de triagem e a prensa estão desobstruídos (sem sacolas no chão).",
+            "A bancada de triagem está em um ponto claro e arejado do galpão.",
+            "As ferramentas de trabalho (balança, arames, carrinhos, vassouras) estão guardadas no lugar certo.",
+            "Os fardos prontos estão empilhados com segurança perto do portão de carregamento."
+          ]
+        },
+        "practiceQuiz": {
+          "question": "Qual é a melhor forma de posicionar a mesa de triagem, a prensa e o local de receber moradores no galpão?",
+          "options": [
+            "Colocar a prensa bem na porta de entrada e deixar a mesa de triagem lá no fundo, longe dos Big Bags.",
+            "Receber os moradores logo na entrada, deixar a mesa de triagem perto dos Big Bags e posicionar a prensa próxima de onde saem os materiais separados.",
+            "Espalhar os materiais em qualquer canto vazio, mudando tudo de lugar todo dia."
+          ],
+          "correctIndex": 1,
+          "explanation": "Perfeito! Quando colocamos cada etapa na sequência certa (Entrada -> Triagem -> Prensa -> Saída), caminhamos menos com peso e trabalhamos com muito mais segurança!"
+        }
+      },
+      {
+        "id": "modulo-4-fluxograma-fichas",
+        "moduleNumber": 4,
+        "title": "Passo a Passo no Papel (Fluxograma e Fichas Simples)",
+        "shortTitle": "4. Desenho do Trabalho e Fichas",
+        "icon": "FileCheck",
+        "color": "purple",
+        "academicSource": "Tema 4: Mapa Visual do Trabalho (Fluxograma) e Fichas Fáceis de Controle",
+        "summary": "Aprenda a desenhar o passo a passo do galpão usando apenas 4 figuras fáceis e veja como criar fichas simples com caixinhas de marcar [ X ].",
+        "flowchartExplanation": {
+          "title": "O que é um Fluxograma? (O Mapa do Nosso Trabalho)",
+          "intro": "Nome bonito, mas ideia muito simples! Fluxograma é desenhar o passo a passo do nosso trabalho usando 4 figuras geométricas para que qualquer pessoa — mesmo quem está chegando hoje — entenda na hora o que fazer:",
+          "symbols": [
+            {
+              "shape": "terminal",
+              "name": "1. Oval / Cápsula (Início e Fim)",
+              "rule": "Marca onde o trabalho começa e onde termina. Dentro dele só escrevemos a palavra INÍCIO ou FIM."
+            },
+            {
+              "shape": "process",
+              "name": "2. Retângulo (Ação / Tarefa)",
+              "rule": "Mostra uma tarefa prática. Começa sempre com uma ação: Receber sacolas, Separar material, Prensar fardo."
+            },
+            {
+              "shape": "decision",
+              "name": "3. Losango '?' (Pergunta de Sim ou Não)",
+              "rule": "Usado quando precisamos tomar uma decisão. Fazemos uma pergunta (Ex: 'Serve para reciclar?') que tem dois caminhos: SIM ou NÃO."
+            },
+            {
+              "shape": "arrow",
+              "name": "4. Seta (Direção do Caminho)",
+              "rule": "Liga uma figura na outra de cima para baixo, mostrando para onde o material vai sem cruzar linhas."
+            }
+          ]
+        },
+        "visualFlowchartTitle": "Fluxograma Visual da Triagem na Cooperativa Recicla VR",
+        "visualFlowchartSubtitle": "Veja abaixo o desenho completo do nosso processo passo a passo desde a chegada até o fardo pronto:",
+        "visualFlowchart": [
+          {
+            "step": 1,
+            "type": "terminal",
+            "label": "INÍCIO",
+            "description": "Chegada das sacolas de materiais no galpão"
+          },
+          {
+            "step": 2,
+            "type": "action",
+            "label": "Receber e abrir as sacolas na bancada de triagem",
+            "description": "Verbo de ação no início: colocar o material sobre a mesa com cuidado"
+          },
+          {
+            "step": 3,
+            "type": "decision",
+            "label": "O material é reciclável seco e limpo?",
+            "yesBranch": "SIM → Separar no Big Bag certo (Papel, Plástico, Metal ou Vidro)",
+            "noBranch": "NÃO → Descartar no tambor de Rejeito com segurança"
+          },
+          {
+            "step": 4,
+            "type": "action",
+            "label": "Prensar os materiais separados em fardos",
+            "description": "Compactar na prensa hidráulica quando o Big Bag encher"
+          },
+          {
+            "step": 5,
+            "type": "action",
+            "label": "Pesar o fardo na balança e marcar na ficha",
+            "description": "Registrar o peso para o controle transparente da cooperativa"
+          },
+          {
+            "step": 6,
+            "type": "terminal",
+            "label": "FIM",
+            "description": "Fardo pronto no estoque para comercialização coletiva"
+          }
+        ],
+        "formsGuide": {
+          "title": "Como Criar Fichas Simples (Formulários) sem Complicação",
+          "intro": "Na cooperativa, precisamos anotar quantos fardos fizemos e quem entregou materiais. Mas ninguém merece fichas confusas e cheias de letras pequenas! Veja as boas práticas para fazer fichas amigas do trabalhador:",
+          "tips": [
+            {
+              "title": "1. O mais importante fica no alto, à direita",
+              "description": "Coloque a data, o número ou o tipo do material bem grande no topo da folha para achar rápido depois."
+            },
+            {
+              "title": "2. Use cores diferentes para cada tipo de ficha",
+              "description": "Ficha VERDE para Entrega de Moradores/Parceiros; Ficha AZUL para Pesagem de Fardos Prontos; Ficha AMARELA para Presença e Assembleia. Assim todo mundo reconhece pela cor!"
+            },
+            {
+              "title": "3. Use caixinhas de marcar [ X ] em vez de escrever muito",
+              "description": "Escrever cansa e toma tempo de quem está de luva no galpão. Coloque opções prontas como: [ X ] Papelão  [  ] PET  [  ] Latinha. Basta fazer um X!"
+            },
+            {
+              "title": "4. Letras grandes, papel firme e zero palavras difíceis",
+              "description": "Evite linhas pontilhadas apertadas e siglas complicadas. Deixe espaços largos para escrever o peso em quilos (kg) com facilidade."
+            }
+          ]
+        },
+        "interactiveChecklist": {
+          "title": "Checklist da Boa Ficha de Controle no Galpão",
+          "subtitle": "Use esta lista para avaliar ou criar uma ficha de controle na Recicla VR:",
+          "items": [
+            "O título e a data estão bem visíveis na parte de cima da folha.",
+            "Usamos caixinhas de marcar [ X ] para os materiais (Papelão, PET, Alumínio, Vidro) para ninguém precisar escrever muito.",
+            "As letras são grandes e fáceis de ler mesmo de longe na prancheta.",
+            "Não existem palavras difíceis nem linhas pontilhadas espremidas.",
+            "Toda a equipe entendeu para que serve a ficha e onde guardá-la ao final do dia."
+          ]
+        },
+        "practiceQuiz": {
+          "question": "Quando desenhamos um Fluxograma do galpão ou criamos uma Ficha de Controle para a equipe, o que facilita a vida dos cooperados?",
+          "options": [
+            "Usar o Losango para perguntas de SIM/NÃO no fluxograma e colocar caixinhas de marcar [ X ] nas fichas para ninguém precisar escrever textos longos.",
+            "Fazer fichas com letras bem miúdas e obrigar todo mundo a escrever relatórios compridos à mão.",
+            "Cruzar várias setas no desenho e usar palavras em inglês para parecer difícil."
+          ],
+          "correctIndex": 0,
+          "explanation": "Excelente! O Fluxograma com símbolos claros e as Fichas com caixinhas de marcar [ X ] são Tecnologias Sociais que dão autonomia, rapidez e transparência para todos os cooperados!"
+        }
+      },
+      {
+        "id": "modulo-5-editais-prefeitura",
+        "moduleNumber": 5,
+        "title": "Como Buscar e Participar de Editais da Prefeitura",
+        "shortTitle": "5. Editais da Prefeitura",
+        "icon": "Landmark",
+        "color": "blue",
+        "academicSource": "Tema 5: Chamamento Público, Documentação em Dia e Parcerias com o Poder Público",
+        "summary": "Aprenda onde a Prefeitura de Volta Redonda divulga os editais para cooperativas de reciclagem e quais documentos deixar sempre prontos no galpão para nunca perder prazos.",
+        "whereToFind": {
+          "title": "Onde a Prefeitura de Volta Redonda Divulga os Editais?",
+          "intro": "A Prefeitura contrata e apoia as cooperativas de catadores por meio do 'Edital de Chamamento Público' (garantido pela Lei Nacional de Resíduos Sólidos nº 12.305/2010 e pela Lei Municipal nº 5.762/2020). Veja os 3 canais oficiais para acompanhar:",
+          "channels": [
+            {
+              "name": "1. Site Oficial da Prefeitura (Aba Licitações)",
+              "badge": "Consulta na Internet",
+              "description": "Acesse voltaredonda.rj.gov.br e entre na área 'Licitações de Volta Redonda'. É lá que saem os Editais de Chamamento Público com a lista completa de documentos.",
+              "url": "https://www.voltaredonda.rj.gov.br/",
+              "buttonLabel": "Abrir Site da Prefeitura"
+            },
+            {
+              "name": "2. Diário Oficial: Jornal 'Volta Redonda em Destaque'",
+              "badge": "Avisos e Resultados",
+              "description": "O 'VR Destaque' é o jornal oficial do município. Nele saem os avisos de abertura de edital, o resultado das cooperativas aprovadas e os prazos para entregar documentos faltantes.",
+              "url": "https://www.voltaredonda.rj.gov.br/diario-oficial",
+              "buttonLabel": "Abrir Diário Oficial (VR Destaque)"
+            },
+            {
+              "name": "3. Secretaria Municipal de Meio Ambiente (SMMA) e CACS-VR",
+              "badge": "Atendimento Presencial",
+              "description": "A SMMA (Av. Sete de Setembro, nº 7, bairro Aterrado — das 8h às 12h e das 13h às 17h) organiza os chamamentos da Coleta Seletiva. Participar do CACS-VR ajuda a saber quando um edital vai abrir!"
+            }
+          ]
+        },
+        "goldenRulesTitle": "5 Passos Práticos para a Cooperativa Não Perder Nenhum Edital",
+        "goldenRules": [
+          {
+            "number": 1,
+            "title": "Escalar um 'Guardião dos Editais' toda semana",
+            "description": "Escolham em assembleia 1 ou 2 cooperados (ou parceiros da UFF) para olhar toda segunda-feira a aba de Licitações e o jornal 'VR Destaque'."
+          },
+          {
+            "number": 2,
+            "title": "Manter a 'Pasta Sempre Pronta' no galpão",
+            "description": "Quando o edital abre, o prazo é curto (10 a 15 dias). Mantenha o Estatuto Social, a Ata de Eleição da Diretoria atual e o CNPJ sempre guardados numa pasta limpa e também salvos no computador."
+          },
+          {
+            "number": 3,
+            "title": "Renovar as Certidões Negativas (CNDs) antes de vencerem",
+            "description": "Mantenha em dia as certidões gratuitas da internet: Receita Federal/INSS, FGTS, Justiça do Trabalho e Tributos Municipais de Volta Redonda."
+          },
+          {
+            "number": 4,
+            "title": "Entregar o Envelope Lacrado e Guardar o Protocolo",
+            "description": "Confira item por item a lista do edital, coloque as cópias em envelope fechado conforme pedido no Chamamento Público, entregue na Secretaria no horário certo e guarde o protocolo carimbado!"
+          },
+          {
+            "number": 5,
+            "title": "Acompanhar o Resultado e o Prazo de Recurso",
+            "description": "Fique de olho no Diário Oficial após entregar o envelope. Se faltar algum documento na primeira análise, a cooperativa tem um prazo curto (5 a 15 dias) para entregar o papel que faltou e garantir sua habilitação!"
+          }
+        ],
+        "interactiveChecklist": {
+          "title": "Checklist da 'Pasta Sempre Pronta' para Editais da Prefeitura",
+          "subtitle": "Marque os documentos que a nossa cooperativa já está mantendo organizados e em dia:",
+          "items": [
+            "Estatuto Social da Cooperativa e Ata de Eleição da Diretoria atualizados na pasta e no computador.",
+            "Cartão do CNPJ ativo e comprovante de endereço do galpão no Bairro Sessenta.",
+            "Certidões Negativas de Débitos (Receita Federal/INSS, FGTS, Justiça do Trabalho e Prefeitura) dentro da validade.",
+            "Lista atualizada de todos os cooperados e cooperadas com cópia de RG, CPF e endereço.",
+            "Definimos em assembleia quem é o 'Guardião dos Editais' para olhar o jornal VR Destaque toda segunda-feira.",
+            "Relação simples dos equipamentos do galpão (prensas, balança, bancada, EPIs) pronta para apresentar."
+          ]
+        },
+        "practiceQuiz": {
+          "question": "O que a cooperativa deve fazer para nunca perder o prazo de um Edital de Chamamento Público da Prefeitura de Volta Redonda?",
+          "options": [
+            "Deixar para procurar o Estatuto, a Ata e as certidões somente no último dia de inscrição do edital.",
+            "Manter a 'Pasta Sempre Pronta' com documentos e certidões em dia no galpão e acompanhar toda semana o site da Prefeitura e o jornal oficial 'VR Destaque'.",
+            "Não participar dos editais públicos porque cooperativa popular não tem direito de prestar serviços para a Prefeitura."
+          ],
+          "correctIndex": 1,
+          "explanation": "Isso mesmo! A Lei nº 12.305/2010 e a Lei Municipal nº 5.762/2020 garantem prioridade às cooperativas de catadores. Com a 'Pasta Sempre Pronta' e olhando o VR Destaque toda semana, a Recicla VR garante seus direitos sem correria!"
+        }
+      }
+    ]
+  }
+};

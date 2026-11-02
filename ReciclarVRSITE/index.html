@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth overflow-x-hidden max-w-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./imagens/logo.jfif" />
+  <title id="page-title">Cooperativa Recicla VR | Reciclagem, Autogestão e Economia Solidária em Volta Redonda - RJ</title>
+  <meta name="description" content="Site institucional e educativo da Cooperativa Recicla VR (Cooperativa Popular dos Agentes do Meio Ambiente do Município de Volta Redonda). Reciclagem, Autogestão, Economia Solidária, Curso Prático de Autogestão e Educação Ambiental em parceria com a UFF." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            coop: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#172554'
+            },
+            river: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e'
+            },
+            earth: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    }
+    .hero-pattern {
+      background-color: #1e3a8a;
+      background-image: linear-gradient(115deg, rgba(23, 37, 84, 0.94) 0%, rgba(30, 58, 138, 0.90) 50%, rgba(37, 99, 235, 0.85) 100%), url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .somos-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
+    }
+    .rico-soft-bg {
+      background-color: #f8fafc;
+    }
+    .page-view-enter {
+      animation: fadeSlideIn 0.28s ease-out;
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    [id^="sub-"] {
+      scroll-margin-top: 6rem;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-coop-600 selection:text-white min-h-screen flex flex-col overflow-x-hidden max-w-full">
+
+  <!-- Link de Pular para o Conteúdo Principal (Acessibilidade) -->
+  <a href="#conteudo-principal" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-coop-800 focus:text-white focus:px-4 focus:py-2.5 focus:rounded-lg focus:shadow-lg focus:font-semibold">
+    Pular para o conteúdo principal
+  </a>
+
+  <!-- Aviso de Pré-visualização de Edições Locais (exibido quando há rascunho salvo no navegador via Painel Admin) -->
+  <div id="custom-content-banner" class="hidden bg-amber-500 text-slate-950 px-4 py-2.5 text-sm font-medium shadow-sm relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 shrink-0"></i>
+        <span><strong>Modo de Pré-visualização Ativo:</strong> Você está visualizando alterações salvas no navegador pelo Painel de Edição Visual.</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="admin.html" class="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3 py-1 rounded-md text-xs font-semibold hover:bg-slate-800 transition">
+          <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+          Abrir Painel de Edição
+        </a>
+        <button id="reset-preview-btn" type="button" class="inline-flex items-center gap-1 bg-white/80 hover:bg-white text-slate-900 px-3 py-1 rounded-md text-xs font-semibold transition">
+          Restaurar Original
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho e Barra de Navegação Fixa (Estilo Editorial SomosCoop / Rico) -->
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-100 h-20 w-full">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 h-full">
+      <div class="flex items-center justify-between h-full gap-4">
+        <!-- Marca / Logotipo Oficial da Cooperativa -->
+        <a href="#inicio" data-nav-target="inicio" class="flex items-center gap-3 group focus:outline-none shrink-0" aria-label="Ir para a página inicial - Cooperativa Recicla VR">
+          <img
+            src="./imagens/logo.jfif"
+            alt="Logotipo Cooperativa Recicla VR"
+            onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=1;this.src='./imagens/logo.jpg';}else{this.onerror=null;this.src='./assets/logo-recicla-vr.svg';}"
+            class="w-12 h-12 rounded-xl object-cover shrink-0"
+          />
+          <span class="font-display text-2xl sm:text-3xl tracking-tight leading-none">
+            <span class="font-light text-coop-900">Recicla</span> <span class="font-extrabold text-coop-600">VR</span>
+          </span>
+        </a>
+
+        <!-- Abas de Navegação Desktop Minimalistas (Sem Ícones) -->
+        <nav aria-label="Menu principal de páginas" class="hidden xl:flex items-center justify-center flex-1 min-w-0">
+          <div id="desktop-nav-links" class="flex items-center gap-1 xl:gap-2">
+            <!-- Preenchido dinamicamente por js/app.js -->
+          </div>
+        </nav>
+
+        <!-- Botão CTA Pílula Amarela à Direita (Desktop) -->
+        <div class="hidden xl:flex items-center shrink-0">
+          <a
+            href="#entrega-materiais"
+            data-nav-target="entrega-materiais"
+            class="rounded-full bg-amber-400 hover:bg-amber-300 text-coop-950 font-bold text-sm px-6 py-2.5 transition shadow-sm whitespace-nowrap"
+          >
+            Entregar recicláveis
+          </a>
+        </div>
+
+        <!-- Botão Menu Mobile (Hambúrguer) -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="xl:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-slate-700 hover:text-coop-800 hover:bg-coop-50 focus:outline-none focus:ring-2 focus:ring-coop-600"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Abrir menu de páginas"
+        >
+          <i id="mobile-menu-icon-open" data-lucide="menu" class="w-6 h-6"></i>
+          <i id="mobile-menu-icon-close" data-lucide="x" class="w-6 h-6 hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile Expansível -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-slate-200 shadow-lg" role="navigation" aria-label="Menu de navegação móvel">
+      <div class="max-w-7xl mx-auto px-4 pt-3 pb-6 space-y-2">
+        <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 pb-1">Escolha uma página para navegar:</p>
+        <div id="mobile-nav-links" class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          <!-- Preenchido dinamicamente por js/app.js -->
+        </div>
+        <div class="pt-3 mt-3 border-t border-slate-100 flex flex-col sm:flex-row gap-2.5">
+          <a href="#entrega-materiais" data-nav-target="entrega-materiais" class="mobile-nav-item flex-1 inline-flex items-center justify-center gap-2 bg-coop-700 hover:bg-coop-800 text-white font-semibold text-sm px-4 py-3 rounded-xl shadow-sm">
+            <i data-lucide="package-check" class="w-4 h-4"></i>
+            <span>Como Entregar Materiais</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal: Arquitetura Multi-Page View -->
+  <main id="conteudo-principal" class="flex-1">
+
+    <!-- ===================================================================
+         PÁGINA 1: INÍCIO (Hero + Grade "O que você procura hoje?" + Resumo)
+         =================================================================== -->
+    <div id="page-inicio" data-page="inicio" class="page-view block page-view-enter">
+      <section class="hero-pattern text-white relative overflow-hidden py-14 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div id="hero-container"></div>
+        </div>
+      </section>
+
+      <section class="py-12 sm:py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="home-summary-container"></div>
+        </div>
+      </section>
+
+      <section class="py-12 sm:py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="home-quick-nav-container"></div>
+          <div data-page-footer-nav="inicio" class="mt-14"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 2: QUEM SOMOS E HISTÓRIA
+         =================================================================== -->
+    <div id="page-quem-somos" data-page="quem-somos" class="page-view hidden page-view-enter bg-slate-50">
+      <div id="header-quem-somos"></div>
+
+      <section id="sub-quem-somos" class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="quem-somos-container"></div>
+        </div>
+      </section>
+
+      <section id="sub-historia" class="py-12 sm:py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="historia-container"></div>
+          <div data-page-footer-nav="quem-somos" class="mt-14"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 3: AUTOGESTÃO E FUNCIONAMENTO
+         =================================================================== -->
+    <div id="page-autogestao" data-page="autogestao" class="page-view hidden page-view-enter bg-slate-50">
+      <div id="header-autogestao"></div>
+
+      <section id="sub-funcionamento" class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="funcionamento-container"></div>
+        </div>
+      </section>
+
+      <section id="sub-autogestao" class="py-14 sm:py-16 bg-gradient-to-br from-coop-950 via-coop-900 to-coop-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="autogestao-container"></div>
+        </div>
+      </section>
+
+      <section id="sub-impacto" class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="impacto-container"></div>
+          <div data-page-footer-nav="autogestao" class="mt-14"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 4 (NOVA): ESCOLA DE AUTOGESTÃO (CURSO PRÁTICO UFF & RECICLA VR)
+         =================================================================== -->
+    <div id="page-curso-autogestao" data-page="curso-autogestao" class="page-view hidden page-view-enter bg-slate-50"><div id="header-curso-autogestao"></div><section class="py-12 sm:py-16"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div id="curso-autogestao-container"></div><div data-page-footer-nav="curso-autogestao" class="mt-14"></div></div></section></div>
+
+    <!-- ===================================================================
+         PÁGINA 5: COMO RECICLAR (Regras + Abas por Material + Segurança)
+         =================================================================== -->
+    <div id="page-como-reciclar" data-page="como-reciclar" class="page-view hidden page-view-enter bg-slate-50">
+      <div id="header-como-reciclar"></div>
+
+      <section id="sub-como-reciclar" class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="como-reciclar-container"></div>
+          <div data-page-footer-nav="como-reciclar" class="mt-14"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 6: ENTREGA E PARCERIAS (Modalidades + 4 Parcerias + UFF)
+         =================================================================== -->
+    <div id="page-parcerias" data-page="parcerias" class="page-view hidden page-view-enter bg-slate-50">
+      <div id="header-parcerias"></div>
+
+      <section id="sub-entrega-materiais" class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="entrega-container"></div>
+        </div>
+      </section>
+
+      <section id="sub-parcerias" class="py-12 sm:py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="parcerias-container"></div>
+          <div data-page-footer-nav="parcerias" class="mt-14"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================================================================
+         PÁGINA 7: DÚVIDAS E CONTATO (FAQ com Filtros + Endereço, Mapa e Redes)
+         =================================================================== -->
+    <div id="page-contato" data-page="contato" class="page-view hidden page-view-enter bg-slate-50">
+      <div id="header-contato"></div>
+
+      <section id="sub-faq" class="py-12 sm:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="faq-container"></div>
+        </div>
+      </section>
+
+      <section id="sub-contato" class="py-12 sm:py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="contato-container"></div>
+          <div data-page-footer-nav="contato" class="mt-14"></div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Rodapé Institucional -->
+  <footer class="bg-coop-950 text-coop-100 border-t border-coop-800">
+    <div id="footer-container" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <!-- Renderizado dinamicamente por js/app.js -->
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante de Contato Rápido pelo WhatsApp -->
+  <a
+    id="floating-whatsapp-btn"
+    href="https://wa.me/5524999999999"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a Cooperativa Recicla VR pelo WhatsApp"
+    class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-3.5 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all focus:outline-none focus:ring-4 focus:ring-emerald-300"
+  >
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="hidden sm:inline text-sm">Falar no WhatsApp</span>
+  </a>
+
+  <!-- Scripts de Dados e Renderização Dinâmica -->
+  <script src="./data/siteContent.js"></script>
+  <script src="./js/course.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
